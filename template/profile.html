@@ -1,0 +1,38 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>User Profile</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="{% static 'profile.css' %}" />
+    <h2>User Profile</h2>
+    <p>Welcome, {{ user_profile.username }}!</p>
+    {%if user_profile.is_staff == 1%}
+      <p> Your role is: Admin</p>
+      <h3>Users</h3>
+      <ul>
+        {% for user in users %}
+        {%if user.is_staff == 1%}
+          <li>{{ user.username }}: Admin</li>
+        {% else %}
+          <li>{{ user.username }}: Member</li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p> Your role is: Member</p>
+    {% endif %}
+    
+
+    <form action="logout" method="post">
+      {% csrf_token %}
+      <input type="submit" class = "back" value="Logout">
+    </form>
+    <form action="changepassword" method="get">
+        {% csrf_token %}
+        <input type="submit" class = "button" value="change password">
+    </form>
+    </script>
+  </body>
+</html>
