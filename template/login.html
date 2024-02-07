@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    {% comment %} import style from static login.css {% endcomment %}
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
+  </head>
+  <body>
+    <h2>Login</h2>
+    {% if error %}
+    <p style="color: red">{{ error }}</p>
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input
+        class="input"
+        type="text"
+        id="username"
+        name="username"
+        required
+      /><br />
+      <label for="password">Password:</label>
+      <input
+        class="input"
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br />
+      <div class="buttons-container">
+        <a href="{% url 'signup' %}" class="back">Signup</a>
+        <input class="button" type="submit" value="Login" />
+      </div>
+    </form>
+  </body>
+</html>

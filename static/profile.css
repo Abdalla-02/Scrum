@@ -1,0 +1,85 @@
+h2 {
+    width: 100%;
+    height: 200pxS;
+    text-align:left;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input{
+    width: 25%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing:border-box;
+    font-size: large;
+    border-radius: 10px;
+    border-color: #0f0f0f;
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button{
+    background-color: #28a7a7;
+    border: none;
+    color: white;
+    padding: 24px 36px;
+    text-align: center;
+    font-size: 16px;
+    margin:auto;
+    cursor: pointer;
+    border-radius: 10px;
+    /* center the button */
+    display: block;
+}
+
+.button:hover {
+    background-color: #22828f;
+}
+
+/* form content on top of eachother */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.back{
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 24px 36px;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    width: 131px;
+    border-radius: 10px;
+    /* center the button */
+    display: block;
+}
+
+.buttons-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.back:hover {
+    background-color: #ac3621;
+}
+
+
